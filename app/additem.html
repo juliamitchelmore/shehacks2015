@@ -35,18 +35,26 @@
     <div class="container">
 
     <div ng-show="currentview == 'dashboard'">
-      <h2>My Listings</h2>
-      <div ng-repeat="item in userproduce">
-          <div class="col-xs-12 no-padding">
-            <img class="col-xs-3" ng-src="{{item.img}}">
-            <p class="col-xs-7 ">
-              <span class="col-xs-6">{{item.type}}</span>
-              <span class="col-xs-1">{{item.quantity}}</span>
-              <span class="col-xs-2">{{item.distance}}</span>
-              <span class="col-xs-3">{{item.price}}</span>
-            </p>
-            <p class="col-xs-2">${{item.price * item.quantity | number:2}}</p>
-          </div>
+      <p class="product-title">My Listings</p>
+
+  <div class="col-xs-12 no-padding">
+          <p class="col-xs-2"></p>
+          <p class="col-xs-10 no-padding">
+            <small class="col-xs-5">Product</small>
+            <small class="col-xs-3">Quantity</small>
+            <small class="col-xs-4">$ Unit</small>
+          </p>
+        </div>
+        <div data-ng-repeat="item in userproduce">
+            <div class="col-xs-12 no-padding">
+              <img class="col-xs-2 no-padding" ng-src="{{item.img}}">
+              <p class="col-xs-10 no-padding">
+                <span class="col-xs-5">{{item.type | titlecase}}</span>
+                <span class="col-xs-3">{{item.quantity}}</span>
+                <span class="col-xs-4">${{item.price | number:2}}</span>
+              </p>
+            
+            </div>
       </div>
        <a class="btn btn-lg" ng-click="currentview = 'add'">Add</a>
     </div>

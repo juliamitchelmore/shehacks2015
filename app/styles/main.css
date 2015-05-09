@@ -9,9 +9,28 @@ body {
   padding: 0;
 }
 
+.btn
+{
+    margin-top: 15px;
+    padding: 5px;
+    color: white;
+    background: #476b35;
+    border-radius: 0;
+}
+
+.btn:hover
+{
+    background: #6e945b;
+    color: white;
+}
 
 img {
   width: 100%;
+}
+
+input {
+  height: 40px;
+  padding: 5px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -100,15 +119,6 @@ img {
   padding: 0;
 }
 
-.header .btn.login
-{
-    margin-top: 15px;
-    padding: 5px;
-    color: white;
-    background: #476b35;
-    border-radius: 0;
-}
-
 .navbar {
   margin-bottom: 10px;
 }
@@ -156,8 +166,60 @@ small
   background: white;
   z-index: 100;
   margin-left: -15px;
+  height: 75%;
+  padding: 5px;
+  padding-top: 25px;
 }
 
+.product-module .glyphicon-remove-circle {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+  font-size: 24px;
+  background: white;
+  border-radius: 50%;
+}
+
+.product-title
+{
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-module .product-price
+{
+  font-weight: bold;
+  text-align: right;
+  margin-top: 40px;
+}
+
+.product-module input
+{
+  margin: 0;
+  font-size: 20px;
+}
+
+.product-buy-title, .product-buy-price
+{
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.product-buy-price
+{
+  margin-top: 5px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.product-module .sub-text
+{
+  color: #666;
+  font-size: 12px;
+}
 
 /*/////////////*/
 
