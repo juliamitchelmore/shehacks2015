@@ -1,11 +1,12 @@
-app.controller('MainCtrl', ["$scope", "$http", "$q",
+app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
 
-	function ($scope, $http, $q) {
+	function ($scope, $http, $q, $location) {
 		
 		//init
 		$scope.type = "";
 		$scope.data = {};
 		$scope.viewType = 'list';
+		$scope.addnew = {};
 
 		 //dummy produce data for time being
 	    $scope.produce = [
@@ -32,6 +33,22 @@ app.controller('MainCtrl', ["$scope", "$http", "$q",
 		}
 		];
 
+		if(window.location.hash.indexOf('+'))
+		{
+			var hash = window.location.hash.replace('#/', '').split('+');
+
+			if(hash.length > 1)
+			{
+				$scope.produce.push({
+			    	type: hash[0],
+			    	suburb: hash[1],
+			    	postcode: hash[2],
+			    	price: hash[3],
+			    	quantity: hash[4]
+				});
+			}
+		}
+
 		$scope.produceImage = {
 			apple: "images/apple.png",
 			avocado: "images/avocado.png",
@@ -39,6 +56,8 @@ app.controller('MainCtrl', ["$scope", "$http", "$q",
 			basil: "images/basil.png",
 			carrot: "images/carrot.png",
 			mango: "images/mango.png",
+			orange: "images/orange.png",
+			lemon: "images/lemon.png",
 			strawberry: "images/strawberry.png",
 			tomato: "images/tomato.png",
 
@@ -46,7 +65,7 @@ app.controller('MainCtrl', ["$scope", "$http", "$q",
 
 		//connect produce, image and distance
 		angular.forEach($scope.produce, function(value, key) {
-
+			console.log(value, key);
 			
 			var type = '';
 			var location = '';
@@ -69,9 +88,12 @@ app.controller('MainCtrl', ["$scope", "$http", "$q",
 		 	var lat = getLatLng(location)[0];
 		 	var lng = getLatLng(location)[1];
 		 	value.distance = getDistance(lat, lng);
-		 	console.log(lat, lng);
-		 	console.log(getDistance(lat, lng));
 		});
+
+		$scope.getHash = function()
+		{
+			return window.location.hash.replace('#/', '');
+		}
 
 		///LOGIN needs URL
 		$scope.login = function()
