@@ -26,7 +26,7 @@
             <a class="navbar-brand logo" href="index.html"><img src="images/logo.png"></a>
             </div>
 
-            <div class="col-xs-3"><a class="btn" href="login.html">Log In</a></div>
+            <!-- <div class="col-xs-3"><a class="btn" href="login.html">Log In</a></div> -->
           </div>
         </div>
       </div>
@@ -35,14 +35,14 @@
     <div class="container">
 
     <h2>I want to sell</h2>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='mango'"><img src="images/mango.png"></a>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='strawberry'"><img src="images/strawberry.png"></a>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='tomato'"><img src="images/tomato.png"></a>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='banana'"><img src="images/banana.png"></a>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='avocado'"><img src="images/avocado.png"></a>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='lemon'"><img src="images/lemon.png"></a>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='orange'"><img src="images/orange.png"></a>
-      <a class="filter-img col-xs-3" ng-click="addnew.type='apple'"><img src="images/apple.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='mango'}" ng-click="addnew.type='mango'"><img src="images/mango.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='strawberry'}" ng-click="addnew.type='strawberry'"><img src="images/strawberry.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='tomato'}" ng-click="addnew.type='tomato'"><img src="images/tomato.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='banana'}" ng-click="addnew.type='banana'"><img src="images/banana.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='avocado'}" ng-click="addnew.type='avocado'"><img src="images/avocado.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='lemon'}" ng-click="addnew.type='lemon'"><img src="images/lemon.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='orange'}" ng-click="addnew.type='orange'"><img src="images/orange.png"></a>
+      <a class="filter-img col-xs-3" ng-class="{active : addnew.type=='apple'}" ng-click="addnew.type='apple'"><img src="images/apple.png"></a>
 
     <h2>Quantity:</h2>
     <input class="col-xs-12" type="tel" ng-model="addnew.quantity"/>
