@@ -9,6 +9,11 @@ body {
   padding: 0;
 }
 
+
+img {
+  width: 100%;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -65,19 +70,18 @@ body {
   height: 400px;
 }
 
-.logo img{
-  height: 50px;
+.logo {
+  width: 100px;
 
 }
 
 .filter-img img {
-  height: 60px;
+  width: 60px;
 }
 
 .listitem {
   height: 50px;
 }
-
 
 /*/////////////*/
 
