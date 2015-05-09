@@ -5,13 +5,29 @@ function initialize() {
 	//set up google map
 	var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
-      center: new google.maps.LatLng(-25.363882,131.044922),
-      zoom: 8,
+        center: new google.maps.LatLng(-33.910630000000000000, 151.156460000000040000),
+      zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
-
-    setMarker(map, -25.363882,131.044922);
+    //Marrickville
+    setMarker(map, -33.911130, 151.157594);
+    setMarker(map, -33.907035, 151.152830);
+    setMarker(map, -33.914941, 151.145792);
+    setMarker(map, -33.906287, 151.152100);
+    setMarker(map, -33.915796, 151.156993);
+    setMarker(map, -33.904292, 151.156949);
+    setMarker(map, -33.901799, 151.150727);
+    setMarker(map, -33.902799, 151.150727);
+    //Newton
+    setMarker(map, -33.904142, 151.173634);
+    setMarker(map, -33.902005, 151.175178);
+    setMarker(map, -33.905816, 151.174406);
+    setMarker(map, -33.907098, 151.176509);
+    setMarker(map, -33.905852, 151.179985);
+    setMarker(map, -33.902147, 151.178698);
+    setMarker(map, -33.903323, 151.176380);
+    setMarker(map, -33.900438, 151.174835);
   };
 
 function getCurrent() {
@@ -41,7 +57,8 @@ function getDistance(lat, lng) {
 
 function getLatLng(address) {
 	//address to lat long
-	var geocoder = new google.maps.Geocoder();
+    var geocoder = new google.maps.Geocoder();
+    var address = document.getElementById('address').value;
 	var lat, lng;
 	geocoder.geocode( { 'address': address}, function(results, status) {
 
