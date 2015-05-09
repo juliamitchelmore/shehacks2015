@@ -12,89 +12,101 @@ app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
 		 //dummy produce data for time being
 	    $scope.produce = [
 	    {
-	    	type: "mango",
-	    	suburb: "marrickville",
-	    	postcode: "2204",
-	    	price: "0.15",
-	    	quantity: 20
+	        type: "mango",
+	        suburb: "marrickville",
+	        postcode: "2204",
+	        price: "0.15",
+	        quantity: 200,
+            minQty:5
 		},
 		{
 	    	type: "apple",
 	    	suburb: "marrickville",
 	    	postcode: "2204",
 	    	price: "0.10",
-	    	quantity: 20
+	    	quantity: 250,
+		    minQty:5
 		},
 		{
 	    	type: "strawberry",
 	    	suburb: "marrickville",
 	    	postcode: "2204",
 	    	price: "0.00",
-	    	quantity: 50
+	    	quantity: 500,
+	    	minQty: 50
 		},
 	    {
 	        type: "avocado",
 	        suburb: "marrickville",
 	        postcode: "2204",
 	        price: "0.20",
-	        quantity: 15
+	        quantity: 50,
+	        minQty: 5
 	    }
         ,
 		{
 		    type: "lemon",
 		    suburb: "marrickville",
 		    postcode: "2204",
-		    price: "0.05",
-		    quantity: 50
+		    price: "2.50",
+		    quantity: 50,
+		    minQty: 5
 		},
         {
             type: "banana",
             suburb: "marrickville",
             postcode: "2204",
         	price: "0.10",
-        	quantity: 15
+        	quantity: 100,
+        	minQty: 15
         },
         {
             type: "orange",
             suburb: "marrickville",
             postcode: "2204",
         	price: "0.10",
-        	quantity: 25
+        	quantity: 250,
+        	minQty: 25
         },
         {
             type: "tomato",
             suburb: "marrickville",
             postcode: "2204",
             price: "0.05",
-            quantity: 20
+            quantity: 50,
+            minQty: 20
         },
         {
             type: "mango",
             suburb: "Newtown",
             postcode: "2042",
             price: "0.10",
-            quantity: 15
+            quantity: 150,
+            minQty: 20
         },
 		{
 		    type: "apple",
 		    suburb: "Newtown",
 		    postcode: "2042",
 		    price: "0.12",
-		    quantity: 25
+		    quantity: 175,
+		    minQty: 25
 		},
 		{
 		    type: "strawberry",
 		    suburb: "Newtown",
 		    postcode: "2042",
 		    price: "0.07",
-		    quantity: 30
+		    quantity: 75,
+		    minQty: 20
 		},
 	    {
 	        type: "avocado",
 	        suburb: "Newtown",
 	        postcode: "2042",
 	        price: "0.15",
-	        quantity: 15
+	        quantity: 150,
+	        minQty: 25
 	    }
         ,
 		{
@@ -102,28 +114,32 @@ app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
 		    suburb: "Newtown",
 		    postcode: "2042",
 		    price: "0.00",
-		    quantity: 50
+		    quantity: 300,
+		    minQty: 25
 		},
         {
             type: "banana",
             suburb: "Newtown",
             postcode: "2042",
             price: "0.10",
-            quantity: 15
+            quantity: 50,
+            minQty: 10
         },
         {
             type: "orange",
             suburb: "Newtown",
             postcode: "2042",
             price: "0.20",
-            quantity: 15
+            quantity: 100,
+            minQty: 25
         },
         {
             type: "tomato",
             suburb: "Newtown",
             postcode: "2042",
             price: "0.10",
-            quantity: 18
+            quantity: 50,
+            minQty: 15
         }
 		];
 
