@@ -2,12 +2,15 @@
 
 ////MAPS
 function initialize() {
-	//set up google map
-	var mapCanvas = document.getElementById('map-canvas');
+    //set up google map
+    var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
-        center: new google.maps.LatLng(-33.910630000000000000, 151.156460000000040000),
-      zoom: 14,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+        center: new google.maps.LatLng(-33.904150, 151.165190),
+        zoom: 13,
+        draggable: false,
+        disableDefaultUI:true,
+        disableDoubleClickZoom:true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
     //Marrickville
@@ -28,26 +31,26 @@ function initialize() {
     setMarker(map, -33.902147, 151.178698);
     setMarker(map, -33.903323, 151.176380);
     setMarker(map, -33.900438, 151.174835);
-  };
+};
 
 function getCurrent() {
-	//get current position
-	var latitude;
+    //get current position
+    var latitude;
     var longitude;
-	if("geolocation" in navigator) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-			latitude  = position.coords.latitude;
-    		longitude = position.coords.longitude;
-		});
-	}
-	return [latitude, logitude]; /// return ARRAY
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+        });
+    }
+    return [latitude, logitude]; /// return ARRAY
 };
 
 function getDistance(lat, lng) {
-	//code for getting distance of fixed object to current position
-	var distance;
-  	navigator.geolocation.getCurrentPosition(function(position) {
-        var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+    //code for getting distance of fixed object to current position
+    var distance;
+    navigator.geolocation.getCurrentPosition(function (position) {
+        var latLngA = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         var latLngB = new google.maps.LatLng(lat, lng);
         distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
     });
@@ -56,29 +59,27 @@ function getDistance(lat, lng) {
 };
 
 function getLatLng(address) {
-	//address to lat long
+    //address to lat long
     var geocoder = new google.maps.Geocoder();
-    var address = document.getElementById('address').value;
-	var lat, lng;
-	geocoder.geocode( { 'address': address}, function(results, status) {
+    var lat, lng;
+    geocoder.geocode({ 'address': address.value }, function (results, status) {
 
-	  if (status == google.maps.GeocoderStatus.OK) {
-	    lat = results[0].geometry.location.lat();
-	    lng = results[0].geometry.location.lng();
-	  } 
-	}); 
-	return [lat, lng]; ////returning ARRAY????
+        if (status == google.maps.GeocoderStatus.OK) {
+            lat = results[0].geometry.location.lat();
+            lng = results[0].geometry.location.lng();
+        }
+    });
+    return [lat, lng]; ////returning ARRAY????
 };
 
 function setMarker(map, lat, lng) {
-	var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(lat, lng),
-      map: map,
-      title: ''
-  });
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(lat, lng),
+        map: map,
+        title: ''
+    });
 }
 
-$(window).load(function()
-{
-	initialize();
+$(window).load(function () {
+    initialize();
 });
