@@ -165,13 +165,10 @@ app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
 		    mango: 0.15,
 		    strawberry: 0.05,
 		    tomato: 0.10,
-
 		};
 
 		//connect produce, image and distance
 		angular.forEach($scope.produce, function(value, key) {
-			console.log(value, key);
-			
 			var type = '';
 			var location = '';
 		 	angular.forEach(value, function(value, key) {
