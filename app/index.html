@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html ng-app="shehacks2015App">
   <head>
     <meta charset="utf-8">
@@ -61,7 +61,7 @@
         </div>
         <div data-ng-repeat="item in produce | filter: {postcode: postcode} | filter: type">
           <a ng-click="currentitem = true">
-            <div class="col-xs-12 no-padding">
+            <div class="col-xs-12 no-padding" id="bottomline">
               <img class="col-xs-2 no-padding" ng-src="{{item.img}}">
               <p class="col-xs-10 no-padding">
                 <span class="col-xs-5">{{item.type | titlecase}}</span>
