@@ -88,6 +88,11 @@ input {
   padding: 0;
 }
 
+#bottomline{
+   border-bottom: thin solid #CCCCCC;
+   width:100%;
+}
+
 #map-canvas {
   width: 320px;
   height: 200px;
