@@ -70,18 +70,84 @@ img {
 }
 
 #map-canvas {
-  width: 300px;
-  height: 400px;
+  width: 320px;
+  height: 200px;
+  margin-left: -15px;
 }
 
 .logo {
   width: 100px;
-
+  padding-top: 10px;
 }
 
 .filter-img img {
   width: 60px;
 }
+
+.filter-img.active {
+  outline: 2px solid green;
+}
+
+/*HEADER*/
+.header {
+  background: #d8e0e3;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.header .container 
+{
+  padding: 0;
+}
+
+.header .btn.login
+{
+    margin-top: 15px;
+    padding: 5px;
+    color: white;
+    background: #476b35;
+    border-radius: 0;
+}
+
+.navbar {
+  margin-bottom: 10px;
+}
+
+.main-content {
+  margin: 0 -20px;
+  padding: 10px 20px;
+  background-image: url("../images/avocado-bg.png");
+  display: inline-block;
+  background-size: auto   100%;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.main-content h1 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.main-content .postcode {
+  height: 40px;
+  padding: 5px;
+  margin: 10px 5px;
+}
+
+/*HOMEPAGE*/
+small
+{
+  font-weight: bold;
+}
+
+.product-listing
+{
+  padding: 10px 0;
+}
+
+
+/*PRODUCT POPUP*/
 
 .product-module {
   position: fixed;
@@ -89,12 +155,9 @@ img {
   bottom: 0;
   background: white;
   z-index: 100;
-  margin-left: -20px;
+  margin-left: -15px;
 }
 
-.filter-img.active {
-  outline: 2px solid green;
-}
 
 /*/////////////*/
 
