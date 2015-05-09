@@ -93,6 +93,10 @@ img {
   margin-left: -20px;
 }
 
+.filter-img.active {
+  outline: 2px solid green;
+}
+
 /*/////////////*/
 
 /* Responsive: Portrait tablets and up */
