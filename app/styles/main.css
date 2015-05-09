@@ -11,7 +11,7 @@ body {
 
 .btn
 {
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 5px;
     color: white;
     background: #476b35;
@@ -31,6 +31,8 @@ img {
 input {
   height: 40px;
   padding: 5px;
+  margin: 0;
+  font-size: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -119,6 +121,12 @@ input {
   padding: 0;
 }
 
+.header .btn.login
+{
+  margin-left: -10px;
+  margin-top: 15px;
+}
+
 .navbar {
   margin-bottom: 10px;
 }
@@ -195,12 +203,6 @@ small
   margin-top: 40px;
 }
 
-.product-module input
-{
-  margin: 0;
-  font-size: 20px;
-}
-
 .product-buy-title, .product-buy-price
 {
   text-transform: uppercase;
@@ -219,6 +221,48 @@ small
 {
   color: #666;
   font-size: 12px;
+}
+
+
+/*PROFILE PAGE*/
+.section
+{
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/*PRODUCT LISTING*/
+.product-buy-title
+{
+  font-size: 24px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+.product-listing
+{
+  padding: 20px 0;
+}
+
+.d-ib
+{
+  display: inline-block;
+}
+
+.currency-symbol
+{
+  position: absolute;
+  z-index: 20;
+  color: #ccc;
+  padding: 7px 10px 5px;
+  font-size: 20px;
+}
+
+.currency-input
+{
+  padding-left: 30px;
+  position: relative;
 }
 
 /*/////////////*/
