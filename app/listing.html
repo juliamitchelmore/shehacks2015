@@ -40,44 +40,17 @@
     </div>
 
     <div class="container">
-    <h1>FIND LOCAL PRODUCE</h1>
-    <!-- search field by postcode -->
-    <a class="filter-img col-xs-3" ng-click="type='mango'"><img src="images/mango.png"></a>
-    <a class="filter-img col-xs-3" ng-click="type='strawberry'"><img src="images/strawberry.png"></a>
-    <a class="filter-img col-xs-3" ng-click="type='tomato'"><img src="images/tomato.png"></a>
-    <a class="filter-img col-xs-3" ng-click="type='banana'"><img src="images/banana.png"></a>
-    <a class="filter-img col-xs-3" ng-click="type='avocado'"><img src="images/avocado.png"></a>
-    <a class="filter-img col-xs-3" ng-click="type='lemon'"><img src="images/lemon.png"></a>
-    <a class="filter-img col-xs-3" ng-click="type='orange'"><img src="images/orange.png"></a>
-    <a class="filter-img col-xs-3" ng-click="type='apple'"><img src="images/apple.png"></a>
-
     <div>
-      <a class="btn col-xs-offset-10 col-xs-2" ng-show="viewType == 'map'" ng-click="viewType = 'list'"><span class="glyphicon glyphicon-align-justify"></span></a>
-      <a class="btn col-xs-offset-10 col-xs-2" ng-hide="viewType == 'map'" ng-click="viewType = 'map'"><span class="glyphicon glyphicon-map-marker"></span></a>
-    </div>
-
-    <div ng-show="viewType == 'list'">
-    <input id="postcodeSearch" type="text" placeholder="Please input your postcode" ng-model="postcode"/>
-    <span class="icon-compass">O</span>
-
-        <div data-ng-repeat="item in produce track by $index| filter: postcode | filter: type">
-          <a ng-href="listing.html#{{$index}}">
-          <div class="listitem col-xs-12">
-            <img class="col-xs-4" ng-src="{{item.img}}">
-            <p class="col-xs-4">{{item.distance}}</p>
-            <p class="col-xs-4">${{item.price}}</p>
-          </div></a>
-        </div>
-    </div>
-
-
-    <div ng-show="viewType == 'map'">
-      <div id="map-canvas">
+      <!-- <div id="map-canvas">
         
-      </div>
+      </div> -->
     </div>
 
-
+    <img class="main-product" ng-src="{{produce[getHash()].img}}">
+    <h1>{{produce[getHash()].quantity}} {{produce[getHash()].type | titlecase}}<span ng-if="produce[getHash()].quantity > 1">s</span></h1>
+    <h2>In {{produce[getHash()].suburb}}</h2>
+    <h3>${{produce[getHash()].price * produce[getHash()].quantity | number:2}}</h3>
+    <a class="btn btn-lg">Buy</a>
     </div>
 
     <div class="footer">
