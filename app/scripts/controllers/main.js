@@ -11,36 +11,141 @@ app.controller('MainCtrl', ["$scope", "$http", "$q",
 	    $scope.produce = [
 	    {
 	    	type: "mango",
-	    	suburb: "Rooty Hill",
-	    	postcode: "2000",
-	    	price: "4.34",
-	    	quantity: 3
+	    	suburb: "marrickville",
+	    	postcode: "2204",
+	    	price: "0.15",
+	    	quantity: 20
 		},
 		{
 	    	type: "apple",
-	    	suburb: "Rooty Hill",
-	    	postcode: "2000",
-	    	price: "4.34",
+	    	suburb: "marrickville",
+	    	postcode: "2204",
+	    	price: "0.10",
 	    	quantity: 20
 		},
 		{
 	    	type: "strawberry",
-	    	suburb: "Wahroonga",
-	    	postcode: "2076",
-	    	price: "54.34",
-	    	quantity: 5
-		}
+	    	suburb: "marrickville",
+	    	postcode: "2204",
+	    	price: "0.00",
+	    	quantity: 50
+		},
+	    {
+	        type: "avocado",
+	        suburb: "marrickville",
+	        postcode: "2204",
+	        price: "0.20",
+	        quantity: 15
+	    }
+        ,
+		{
+		    type: "lemon",
+		    suburb: "marrickville",
+		    postcode: "2204",
+		    price: "0.05",
+		    quantity: 50
+		},
+        {
+            type: "banana",
+            suburb: "marrickville",
+            postcode: "2204",
+        	price: "0.10",
+        	quantity: 15
+        },
+        {
+            type: "orange",
+            suburb: "marrickville",
+            postcode: "2204",
+        	price: "0.10",
+        	quantity: 25
+        },
+        {
+            type: "tomato",
+            suburb: "marrickville",
+            postcode: "2204",
+            price: "0.05",
+            quantity: 20
+        },
+        {
+            type: "mango",
+            suburb: "Newtown",
+            postcode: "2042",
+            price: "0.10",
+            quantity: 15
+        },
+		{
+		    type: "apple",
+		    suburb: "Newtown",
+		    postcode: "2042",
+		    price: "0.12",
+		    quantity: 25
+		},
+		{
+		    type: "strawberry",
+		    suburb: "Newtown",
+		    postcode: "2042",
+		    price: "0.07",
+		    quantity: 30
+		},
+	    {
+	        type: "avocado",
+	        suburb: "Newtown",
+	        postcode: "2042",
+	        price: "0.15",
+	        quantity: 15
+	    }
+        ,
+		{
+		    type: "lemon",
+		    suburb: "Newtown",
+		    postcode: "2042",
+		    price: "0.00",
+		    quantity: 50
+		},
+        {
+            type: "banana",
+            suburb: "Newtown",
+            postcode: "2042",
+            price: "0.10",
+            quantity: 15
+        },
+        {
+            type: "orange",
+            suburb: "Newtown",
+            postcode: "2042",
+            price: "0.20",
+            quantity: 15
+        },
+        {
+            type: "tomato",
+            suburb: "Newtown",
+            postcode: "2042",
+            price: "0.10",
+            quantity: 18
+        }
 		];
 
 		$scope.produceImage = {
 			apple: "images/apple.png",
 			avocado: "images/avocado.png",
 			banana: "images/banana.png",
-			basil: "images/basil.png",
+			orange: "images/orange.png",
 			carrot: "images/carrot.png",
 			mango: "images/mango.png",
 			strawberry: "images/strawberry.png",
 			tomato: "images/tomato.png",
+
+		};
+
+		$scope.producePrice = {
+		    apple: 0.10,
+		    avocado: 0.20,
+		    banana: 0.10,
+		    orange: 0.10,
+		    lemon: 0.05,
+		    mango: 0.15,
+		    strawberry: 0.05,
+		    tomato: 0.10,
 
 		};
 
