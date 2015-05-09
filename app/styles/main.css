@@ -65,6 +65,9 @@ img {
 }
 
 /*////////////*/
+.no-padding {
+  padding: 0;
+}
 
 #map-canvas {
   width: 300px;
@@ -78,10 +81,6 @@ img {
 
 .filter-img img {
   width: 60px;
-}
-
-.listitem {
-  height: 50px;
 }
 
 .product-module {

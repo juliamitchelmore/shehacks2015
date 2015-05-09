@@ -6,6 +6,7 @@ app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
 		$scope.type = "";
 		$scope.data = {};
 		$scope.viewType = 'list';
+		$scope.currentview = 'dashboard';
 		$scope.addnew = {};
 		$scope.data.currentitem = {};
 
@@ -142,6 +143,34 @@ app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
             minQty: 15
         }
 		];
+
+		$scope.userproduce = [
+        {
+			img: "images/tomato.png",
+            type: "tomato",
+            suburb: "marrickville",
+            postcode: "2204",
+            price: "0.05",
+            quantity: 50,
+            minQty: 20
+        },
+		{
+
+			img: "images/strawberry.png",
+	    	type: "strawberry",
+	    	suburb: "marrickville",
+	    	postcode: "2204",
+	    	price: "0.00",
+	    	quantity: 500,
+	    	minQty: 50
+		}
+		];
+
+		$scope.addItem = function()
+		{
+			$scope.addnew.img = $scope.produceImage[$scope.addnew.type];
+			$scope.userproduce.push($scope.addnew);
+		};
 
 		if(window.location.hash.indexOf('+'))
 		{

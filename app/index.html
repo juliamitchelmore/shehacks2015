@@ -35,14 +35,14 @@
     <div class="container">
     <h1>FIND LOCAL PRODUCE</h1>
     <!-- search field by postcode -->
-    <a class="filter-img col-xs-3" ng-class="{active : type=='mango'}" ng-click="type='mango'"><img src="images/mango.png"></a>
-    <a class="filter-img col-xs-3" ng-class="{active : type=='strawberry'}" ng-click="type='strawberry'"><img src="images/strawberry.png"></a>
-    <a class="filter-img col-xs-3" ng-class="{active : type=='tomato'}" ng-click="type='tomato'"><img src="images/tomato.png"></a>
-    <a class="filter-img col-xs-3" ng-class="{active : type=='banana'}" ng-click="type='banana'"><img src="images/banana.png"></a>
-    <a class="filter-img col-xs-3" ng-class="{active : type=='avocado'}" ng-click="type='avocado'"><img src="images/avocado.png"></a>
-    <a class="filter-img col-xs-3" ng-class="{active : type=='lemon'}" ng-click="type='lemon'"><img src="images/lemon.png"></a>
-    <a class="filter-img col-xs-3" ng-class="{active : type=='orange'}" ng-click="type='orange'"><img src="images/orange.png"></a>
-    <a class="filter-img col-xs-3" ng-class="{active : type=='apple'}" ng-click="type='apple'"><img src="images/apple.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='mango'}" ng-click="type=='mango' ? type='' : type='mango'"><img src="images/mango.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='strawberry'}" ng-click="type=='strawberry' ? type='' : type='strawberry'"><img src="images/strawberry.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='tomato'}" ng-click="type=='tomato' ? type='' : type='tomato'"><img src="images/tomato.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='banana'}" ng-click="type=='banana' ? type='' : type='banana'"><img src="images/banana.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='avocado'}" ng-click="type=='avocado' ? type='' : type='avocado'"><img src="images/avocado.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='lemon'}" ng-click="type=='lemon' ? type='' : type='lemon'"><img src="images/lemon.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='orange'}" ng-click="type=='orange' ? type='' : type='orange'"><img src="images/orange.png"></a>
+    <a class="filter-img col-xs-3" ng-class="{active : type=='apple'}" ng-click="type=='apple' ? type='' : type='apple'"><img src="images/apple.png"></a>
 
     <div>
       <a class="btn col-xs-offset-10 col-xs-2" ng-show="viewType == 'map'" ng-click="viewType = 'list'"><span class="glyphicon glyphicon-align-justify"></span></a>
@@ -52,12 +52,25 @@
     <div ng-show="viewType == 'list'">
     <input id="postcodeSearch" type="text" placeholder="Please input your postcode" ng-model="postcode"/>
     <span class="icon-compass">O</span>
+      <div class="col-xs-12 no-padding">
+          <p class="col-xs-2"></p>
+          <p class="col-xs-8">
+            <small class="col-xs-6">Product</small>
+            <small class="col-xs-2">Quantity</small>
+            <small class="col-xs-4">Distance</small>
+          </p>
+          <p class="col-xs-2"><small>Price per item</small></p>
+        </div>
         <div data-ng-repeat="item in produce | filter: {postcode: postcode} | filter: type">
           <a ng-click="currentitem = true">
-            <div class="listitem col-xs-12">
-              <img class="col-xs-4" ng-src="{{item.img}}">
-              <p class="col-xs-4">{{item.distance}}</p>
-              <p class="col-xs-4">${{item.price * item.quantity | number:2}}</p>
+            <div class="col-xs-12 no-padding">
+              <img class="col-xs-2 no-padding" ng-src="{{item.img}}">
+              <p class="col-xs-8">
+                <span class="col-xs-6">{{item.type | titlecase}}</span>
+                <span class="col-xs-2 ">{{item.quantity}}</span>
+                <span class="col-xs-4">{{item.distance}}</span>
+              </p>
+              <p class="col-xs-2">${{item.price | number:2}}</p>
             </div>
           </a>
 
