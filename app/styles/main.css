@@ -65,6 +65,7 @@ img {
 }
 
 /*////////////*/
+
 #map-canvas {
   width: 300px;
   height: 400px;
@@ -81,6 +82,15 @@ img {
 
 .listitem {
   height: 50px;
+}
+
+.product-module {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: white;
+  z-index: 100;
+  margin-left: -20px;
 }
 
 /*/////////////*/

@@ -51,7 +51,7 @@
     <p ng-show="addnew.type && addnew.quantity">Recommended price for {{addnew.quantity}} {{addnew.type}}<span ng-if="addnew.quantity > 1">s</span> is ${{producePrice[addnew.type] * addnew.quantity | number:2}}</p>
     <input ng-model="addnew.price" class="col-xs-12" type="number"/>
 
-    <a class="btn btn-lg" ng-href="index.html#{{addnew.type}}+Marrickville+2204+{{addnew.price}}+{{addnew.quantity}}">Sell</a>
+    <a class="btn btn-lg" ng-href="index.html#{{addnew.type}}+Marrickville+2204+{{addnew.price / addnew.quantity}}+{{addnew.quantity}}">Sell</a>
 
     </div>
 

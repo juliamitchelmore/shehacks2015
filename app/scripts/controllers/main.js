@@ -7,6 +7,7 @@ app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
 		$scope.data = {};
 		$scope.viewType = 'list';
 		$scope.addnew = {};
+		$scope.data.currentitem = {};
 
 		 //dummy produce data for time being
 	    $scope.produce = [
@@ -195,7 +196,7 @@ app.controller('MainCtrl', ["$scope", "$http", "$q", "$location",
 		$scope.getHash = function()
 		{
 			return window.location.hash.replace('#/', '');
-		}
+		};
 
 		///LOGIN needs URL
 		$scope.login = function()
